@@ -33,10 +33,10 @@ def containerGerirTarefas():
 
    #Como fazer uma combobox com categorias
     CategoriaTarefa = StringVar()
-    CategoriaTarefa.set("Atividade Pessoal")
     combos=['Atividade pessoal', 'Trabalhos', 'Escola', 'Ferias', 'Tempo livre', 'Desporto', 'Familia']
     comboExample = ttk.Combobox(panelTarefas, values=combos)
     comboExample.place(x=100, y=170)
+    comboExample.current(0)
 
     lblEstado= Label(panelTarefas, text = "Estado")
     lblEstado.place(x=30, y=340)
