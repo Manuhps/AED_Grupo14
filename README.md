@@ -1,2 +1,1 @@
-# AED_Grupo14
-Trabalho pratico AED
+# Projeto_AED
