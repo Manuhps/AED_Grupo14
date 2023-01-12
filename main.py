@@ -4,7 +4,7 @@ from tkinter import ttk          # extensão do tkinter, inclui treeview
 from tkinter import filedialog   # filedialog boxes
 from PIL import ImageTk,Image    # Imagens .jpg ou .png
 from tkinter import messagebox   #  messagebox
-from tkinter import ttk
+from tkinter.ttk import Combobox # combo
 from utilizadores import *
 from tarefas import *
 
@@ -30,18 +30,13 @@ def containerGerirTarefas():
     lblCategoria = Label(panelTarefas, text = "Categoria")
     lblCategoria.place(x=30, y=170)
 
+
+   #Como fazer uma combobox com categorias
     CategoriaTarefa = StringVar()
     CategoriaTarefa.set("Atividade Pessoal")
-    rd1 = Radiobutton(panelTarefas, text = "Atividade Pessoal", value = "Atividade Pessoal", variable= CategoriaTarefa)
-    rd2 = Radiobutton(panelTarefas, text = "Profissional", value = "Profissional", variable= CategoriaTarefa)
-    rd3 = Radiobutton(panelTarefas, text = "Projetos", value = "Projetos", variable= CategoriaTarefa)
-    rd4 = Radiobutton(panelTarefas, text = "Férias", value = "Férias", variable= CategoriaTarefa)
-    rd5 = Radiobutton(panelTarefas, text = "Desporto", value = "Desporto", variable= CategoriaTarefa)
-    rd1.place(x= 87, y= 170)
-    rd2.place(x= 87, y= 200)
-    rd3.place(x= 87, y= 230)
-    rd4.place(x= 87, y= 260)
-    rd5.place(x= 87, y= 290)
+    combos=['Atividade pessoal', 'Trabalhos', 'Escola', 'Ferias', 'Tempo livre', 'Desporto', 'Familia']
+    comboExample = ttk.Combobox(panelTarefas, values=combos)
+    comboExample.place(x=100, y=170)
 
     lblEstado= Label(panelTarefas, text = "Estado")
     lblEstado.place(x=30, y=340)

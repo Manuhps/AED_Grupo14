@@ -14,9 +14,7 @@ def adicionarTarefa(tarefa, data, local, tipoTarefa, tview):
     
     lista = lerTarefas()
     refreshListboxTarefas(lista, tview)
-   
-
-
+  
 def apagarTarefa(tview):    
     tview.delete(tview.selection())
 
